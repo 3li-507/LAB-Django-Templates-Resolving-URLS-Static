@@ -1,12 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <link href="/static/css/style.css" rel="stylesheet" />
-    <title>Document</title>
-</head>
-<body>
-    hhhiii
-</body>
-</html>
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<header class="header">
+    <div class="right-links">
+        <a href="https://workspace.google.com/intl/ar/gmail/">Gmail</a>
+        <a href="#">Images</a>
+       
+        <button class="signin-btn">Sign in</button>
+    </div>
+</header>
+
+<!-- <main class="main">
+
+    <img src="{% static 'images/google-logo.png' %}" class="logo">
+
+
+    <div class="search-container">
+         <div class="search-box">
+                <span class="material-symbols-outlined search-icon">search</span>
+
+                <input type="search" placeholder="Google here ..">
+
+             <div class="icons">
+                <img src="{% static 'images/mircophone.png' %}">
+                <img src="{% static 'images/camera.png' %}">
+            </div>
+        </div>
+</div>
+
+
+    <div class="buttons">
+        <button>Google Search</button>
+        <button>I'm Feeling Lucky</button>
+    </div>
+
+</main> -->
+<!-- <main class="main">
+
+    <img src="{% static 'images/google-logo.png' %}" class="logo">
+
+    <div class="search-container">
+        <form action="https://www.google.com/search" method="GET" class="search-box">
+
+            <span class="material-symbols-outlined search-icon">search</span>
+
+            <input type="text" name="q" placeholder="Google here ..">
+
+            <div class="icons">
+                <img src="{% static 'images/mircophone.png' %}">
+                <img src="{% static 'images/camera.png' %}">
+            </div>
+
+        </form>
+    </div>
+
+    <div class="buttons">
+        <button type="submit" form="search-form">Google Search</button>
+        <button type="button">I'm Feeling Lucky</button>
+    </div>
+
+</main> -->
+<main class="main">
+
+    <img src="{% static 'images/google-logo.png' %}" class="logo">
+
+    <div class="search-container">
+        <form id="search-form" action="https://www.google.com/search" method="GET" class="search-box">
+
+            <span class="material-symbols-outlined search-icon">search</span>
+
+            <input type="search" name="q" placeholder="Google here ..">
+
+            <div class="icons">
+                <img src="{% static 'images/mircophone.png' %}">
+                <img src="{% static 'images/camera.png' %}">
+            </div>
+
+        </form>
+    </div>
+
+    <div class="buttons">
+        <button type="submit" form="search-form">Google Search</button>
+        <button type="button">I'm Feeling Lucky</button>
+    </div>
+
+</main>
+
+
+
+<footer class="footer">
+    <div class="footer-top">Saudi Arabia</div>
+    <div class="footer-bottom">
+        <div>
+            <a href="#">About</a>
+            <a href="#">Advertising</a>
+            <a href="#">Business</a>
+            <a href="#">How Search works</a>
+        </div>
+        <div>
+            <a href="#">Privacy</a>
+            <a href="{% url 'main:terms' %}">Terms</a>
+            <a href="#">Settings</a>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}
